@@ -1,0 +1,344 @@
+PUSH CS
+POP DS
+MOV DX,0xe
+MOV AH,0x9
+INT 0x21
+MOV AX,0x4c01
+INT 0x21
+PUSH SP
+PUSH 0x7369
+AND byte ptr [BX + SI + 0x72],DH
+OUTSW DX,SI
+JC 0x1000:007a
+INSW ES:DI,DX
+AND byte ptr [BP + DI + 0x61],AH
+OUTSB DX,SI
+OUTSB DX,SI
+OUTSW DX,SI
+JZ 0x1000:0042
+BOUND SP,word ptr [DI + 0x20]
+JC 0x1000:009c
+OUTSB DX,SI
+AND byte ptr [BX + DI + 0x6e],CH
+AND byte ptr [SI + 0x4f],AL
+PUSH BX
+AND byte ptr [DI + 0x6f],CH
+OR AX,0xa0d
+AND AL,0x0
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+INSB ES:DI,DX
+DEC SP
+MOVSB ES:DI,SI
+SUB DH,CH
+AND DH,BH
+SUB DH,CH
+AND DH,BH
+SUB DH,CH
+AND DH,BH
+AND word ptr [BP + 0xf7b7],DX
+SUB CH,DH
+AND DH,BH
+AND word ptr [BP + 0xf7a1],DX
+POP SS
+OUT DX,AL
+AND DH,BH
+AND word ptr [BP + 0xf7a6],DX
+CMP DH,CH
+AND DH,BH
+AND word ptr [BP + 0xf7b1],DX
+SUB CH,DH
+AND DH,BH
+XOR SI,word ptr [BP + DI + -0x42]
+IMUL word ptr [BP + SI]
+OUT DX,AL
+AND DH,BH
+DEC SI
+ADD CL,CH
+IMUL word ptr [SI]
+OUT DX,AL
+AND DH,BH
+MOV BL,0x5
+JMP 0x1000:2b7c
+POP ES
+OUT DX,AL
+AND DH,BH
+SUB DH,CH
+AND SI,DI
+SCASB ES:DI
+IN AL,DX
+AND DH,BH
+MOVAPS XMM3,xmmword ptr [SI + -0x9]
+SUB SI,BP
+AND DH,BH
+AND word ptr [BP + 0xf7ab],DX
+INC AX
+OUT DX,AL
+AND DH,BH
+AND word ptr [BP + 0xf7b6],DX
+SUB SI,BP
+AND DH,BH
+AND word ptr [BP + 0xf7b3],DX
+SUB SI,BP
+AND DH,BH
+PUSH DX
+IMUL SP,word ptr [BP + DI + 0x68],-0x11d8
+AND DH,BH
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+PUSH AX
+INC BP
+ADD byte ptr [BX + SI],AL
+XCHG byte ptr FS:[0x7200],AL
+PUSHA
+XOR byte ptr [BX + 0x0],BL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD AL,DH
+ADD byte ptr [BP + SI],AH
+ADD byte ptr [BP + DI],CL
+ADD CL,byte ptr [BX + DI]
+ADD byte ptr [BX + SI],AL
+JP 0x1000:010b
+ADD byte ptr [BX + SI],AL
+PUSH SS
+POP ES
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [SI + 0x1b],CH
+OR AL,0x0
+ADD byte ptr [BX + SI],DL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI + 0x1],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADC byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD AL,byte ptr [BX + SI]
+ADD byte ptr [DI],AL
+ADD byte ptr [BP + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [DI],AL
+ADD byte ptr [BP + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+RCL byte ptr [BP + DI],0x1
+ADD byte ptr [BX + SI],AL
+ADD AL,0x0
+ADD byte ptr [BX + DI + 0x38],BL
+ADC AL,0x0
+ADD AX,word ptr [BX + SI]
+INC AX
+ADD word ptr [BX + SI],0x1000
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADC byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],DL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADC byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],DL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI + 0x24],CL
+ADC AL,byte ptr [BX + SI]
+INC SP
+ADD AL,byte ptr [BX + SI]
+ADD byte ptr [BX + SI],AL
+PUSHA
+ADC AX,word ptr [BX + SI]
+CALL 0x1000:01be
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI + 0xc],DL
+ADD byte ptr [BP + DI],DL
+ADD byte ptr [BX + SI],AL
+CBW
+POP DS
+ADC AL,byte ptr [BX + SI]
+PUSHA
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [0x6574],CH
+JS 0x1000:0261
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BP + 0xc78],CH
+ADD byte ptr [BX + SI],AL
+ADC byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+JP 0x1000:0207
+ADD byte ptr [BX + SI],AL
+ADD AL,0x0
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AH
+ADD byte ptr [BX + SI],AL
+PUSHA
+JC 0x1000:0277
+POPA
+JZ 0x1000:0277
+ADD byte ptr [BX + SI],AL
+XCHG AH,DL
+ADD AX,0x0
+NOP
+OR AL,0x0
+ADD DH,DL
+ADD AX,0x0
+JLE 0x1000:0233
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI + 0x0],AL
+ADD byte ptr [BX + SI + 0x2e],AL
+POPA
+JZ 0x1000:029e
+ADD byte ptr [BX + SI],AL
+ADD AL,BH
+JNZ 0x1000:0243
+ADD byte ptr [BX + SI],AL
+JO 0x1000:0259
+ADD byte ptr [BX + SI],AL
+PUSH 0x0
+ADD byte ptr [SI + 0x12],DL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI + 0x0],AL
+ADD AL,AL
+JO 0x1000:02c7
+POPA
+JZ 0x1000:02c7
+ADD byte ptr [BX + SI],AL
+PUSH AX
+ADD byte ptr FS:[BX + SI],AL
+ADD AL,DH
+ADC AL,byte ptr [BX + SI]
+ADD byte ptr [BP + 0x0],AH
+ADD byte ptr [BX + SI],AL
+MOV SP,0x12
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+INC AX
+ADD byte ptr [BX + SI],AL
+INC AX
+JC 0x1000:02fe
+JC 0x1000:02f0
+ADD byte ptr [BX + SI],AL
+ADD AL,CH
+AAS
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI + 0x13],AH
+ADD byte ptr [BX + SI],AL
+INC AX
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BP + SI],AH
+ADC AX,word ptr [BX + SI]
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+INC AX
+ADD byte ptr [BX + SI],AL
+INC AX
+JC 0x1000:0318
+INSB ES:DI,DX
+OUTSW DX,SI
+ARPL word ptr [BX + SI],AX
+ADD byte ptr [BX + SI + 0x23],CH
+ADD byte ptr [BX + SI],AL
+MOV AL,[0x13]
+ADD byte ptr [SI],AH
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BP + SI + 0x13],AH
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI + 0x0],AL
+ADD byte ptr [BP + SI + 0x0],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
+ADD byte ptr [BX + SI],AL
