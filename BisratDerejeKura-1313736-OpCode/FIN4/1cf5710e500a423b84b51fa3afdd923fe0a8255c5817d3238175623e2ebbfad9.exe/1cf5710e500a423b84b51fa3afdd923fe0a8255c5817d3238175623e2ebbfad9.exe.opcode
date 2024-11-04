@@ -1,0 +1,7 @@
+addr,opcode
+1800ad342,MOV
+1800ad34c,JMP
+1800ad34e,MOV
+1800ad358,JMP
+1800ad3be,MOV
+1800ad3c8,JMP
